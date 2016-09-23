@@ -1,13 +1,15 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: "./app/boot.ts",
+    entry: {  
+        boot: "./app/boot.ts"
+    },
     output: {
         path: __dirname,
         filename: "./dist/bundle.js"
     },
     resolve: {
-        extensions: ['', '.ts', '.js']  
+        extensions: ['', '.ts', '.js']
     },
     module: {
         loaders: [{
