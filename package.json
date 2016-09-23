@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Project template",
   "main": "./app/boot.ts",
-  "scripts": {
+  "scripts": {    
     "watch": "webpack --watch --progress --profile",
     "build": "webpack --progress --profile --bail",
     "server": "webpack-dev-server --inline --port 8080",
