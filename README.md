@@ -4,7 +4,6 @@ Small angular 2 template with webpack
 ## Installation
 * cd 'your_app_directory'
 * npm install
-* npm run watch
-* npm run server
+* npm run dev
 
 The app will run localhost:8080/

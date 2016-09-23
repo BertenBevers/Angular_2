@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Project template",
   "main": "./app/boot.ts",
-  "scripts": {    
+  "scripts": {
+    "dev": "start npm run watch && start npm run server",
     "watch": "webpack --watch --progress --profile",
     "build": "webpack --progress --profile --bail",
     "server": "webpack-dev-server --inline --port 8080",
@@ -36,7 +37,7 @@
   },
   "devDependencies": {
     "angular2-template-loader": "^0.5.0",
-    "awesome-typescript-loader": "^2.2.4",
+    "awesome-typescript-loader": "^2.2.4", 
     "typescript": "^2.0.3",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
