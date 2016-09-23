@@ -1,2 +1,5 @@
-# Angular_2
-Small project with Angular 2 and webpack
+# Angular 2 with webpack quickstart
+Small angular 2 template with webpack
+
+
+
