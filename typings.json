@@ -1,0 +1,7 @@
+{
+  "globalDependencies": {
+    "angular-protractor": "registry:dt/angular-protractor#1.5.0+20160425143459",
+    "core-js": "registry:dt/core-js#0.0.0+20160725163759",  
+    "node": "registry:dt/node#6.0.0+20160831021119"   
+  }
+}
