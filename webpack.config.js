@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 
+
 module.exports = {
     entry: {  
         boot: "./app/boot.ts"
@@ -9,11 +10,15 @@ module.exports = {
         filename: "./dist/bundle.js"
     },
     resolve: {
-        extensions: ['', '.ts', '.js']
+        extensions: ['', '.ts', '.js', '.html']
     },
     module: {
         loaders: [{
             test: /\.ts$/, loaders: ['awesome-typescript-loader', 'angular2-template-loader'], exclude: /node_modules/
+        },
+        {
+            test: /\.html$/,
+            loader: 'raw-loader'
         }]
     },
     watch: true
