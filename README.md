@@ -1,9 +1,19 @@
-# Angular 2 with webpack
+
+ # Angular 2 with webpack
 Small angular 2 template with webpack
 
-## Installation
-* cd 'your_app_directory'
-* npm install
-* npm run dev
+1) Open a command prompt in the project's root directory
 
-The app will run localhost:8080/
+2) Type: `npm install`
+    This installs the dependencies as defined in the package.json file.
+    
+3) Type: `npm run dev`
+    
+
+
+
+
+
+   
+
+
