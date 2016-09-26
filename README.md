@@ -1,5 +1,4 @@
-
- # Angular 2 with webpack
+# Angular 2 with webpack
 Small angular 2 template with webpack
 
 1) Open a command prompt in the project's root directory
