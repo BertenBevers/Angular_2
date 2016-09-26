@@ -7,7 +7,7 @@
     "dev": "start npm run watch && start npm run server",
     "watch": "webpack --watch --progress --profile",
     "build": "webpack --progress --profile --bail",
-    "server": "webpack-dev-server --inline --port 8080",
+    "server": "start http://localhost:8080/ & webpack-dev-server --inline --port 8080",
     "start": "npm run server"
   },
   "repository": {
