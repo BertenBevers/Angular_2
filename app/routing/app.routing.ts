@@ -1,5 +1,6 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 
 import { HomeComponent } from '../home/home.component';
@@ -11,7 +12,5 @@ const appRoutes: Routes = [
     { path: 'login', component: LoginComponent}
 ]
 
-export const appRoutingProviders: any[] = [
-
-];
+export const appRoutingProviders: any[] = [{provide: LocationStrategy, useClass: HashLocationStrategy}];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
