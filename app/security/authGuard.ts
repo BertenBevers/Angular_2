@@ -1,20 +1,28 @@
 import { Injectable } from '@angular/core';
-import { CanActivate } from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
+import { AuthenticationService } from './authenticationService';
 
 @Injectable()
-export class CanActivateIfLoggedIn implements CanActivate {
-    constructor() {        
+export class Authorize implements CanActivate {
+    constructor(private _authService: AuthenticationService, private _router: Router) {
     }
     canActivate() {
-        //check if user is logged in.
+        if (!this._authService.isAuthenticated()) {
+            this._router.navigateByUrl('/login');
+            return false;
+        }
         return true;
     }
 }
 @Injectable()
-export class CanAlwaysActivate implements CanActivate {
-    constructor() {        
+export class AllowAnonymous implements CanActivate {
+    constructor(private _authService: AuthenticationService, private _router: Router) {
     }
     canActivate() {
+        if (this._authService.isAuthenticated()) {
+            this._router.navigateByUrl('');
+            return false;
+        }
         return true;
     }
 }

@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { routing, appRoutingProviders } from './routing/app.routing';
 import { CustomRouterOutlet } from './routing/CustomRouterOutlet';
-import { CanActivateIfLoggedIn, CanAlwaysActivate } from './security/authGuard';
+import { Authorize, AllowAnonymous } from './security/authGuard';
 import { HttpModule } from '@angular/http';
 import { HttpClient } from './common/httpClient';
+import { AuthenticationService } from './security/authenticationService';
 
 import { AppComponent } from './main/app.component';
 import { HomeComponent } from './home/home.component';
@@ -16,7 +17,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     imports: [BrowserModule, routing, HttpModule],
     exports: [],
     declarations: [AppComponent, HomeComponent, LoginComponent, NavigationComponent],
-    providers: [appRoutingProviders, HttpClient, CanActivateIfLoggedIn, CanAlwaysActivate],
+    providers: [appRoutingProviders, HttpClient, Authorize, AllowAnonymous, AuthenticationService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
