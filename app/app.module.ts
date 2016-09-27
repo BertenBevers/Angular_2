@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { routing, appRoutingProviders } from './routing/app.routing';
+import { CustomRouterOutlet } from './routing/CustomRouterOutlet';
+import { CanActivateIfLoggedIn, CanAlwaysActivate } from './security/authGuard';
 import { HttpModule } from '@angular/http';
 import { HttpClient } from './common/httpClient';
 
@@ -14,7 +16,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     imports: [BrowserModule, routing, HttpModule],
     exports: [],
     declarations: [AppComponent, HomeComponent, LoginComponent, NavigationComponent],
-    providers: [appRoutingProviders, HttpClient],
+    providers: [appRoutingProviders, HttpClient, CanActivateIfLoggedIn, CanAlwaysActivate],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
